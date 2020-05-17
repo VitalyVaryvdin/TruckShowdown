@@ -1,0 +1,33 @@
+#ifndef _OgreBulletIncludes_h_
+#define _OgreBulletIncludes_h_
+
+#include "OgreBulletDynamics.h"
+#include "OgreBulletCollisionsRay.h"
+#include "OgreBulletCollisionsShape.h"
+#include "OgreBulletDynamicsWorld.h"
+#include "OgreBulletDynamicsRigidBody.h"
+#include "OgreBulletDynamicsConstraint.h"
+#include "Constraints/OgreBulletDynamicsPoint2pointConstraint.h"
+#include "Constraints/OgreBulletDynamicsRaycastVehicle.h"
+#include "Constraints/OgreBulletDynamicsHingeConstraint.h"
+#include "Constraints/OgreBulletDynamics6DofConstraint.h"
+#include "Debug/OgreBulletCollisionsDebugLines.h"
+#include "Debug/OgreBulletCollisionsDebugDrawer.h"
+#include "Debug/OgreBulletCollisionsDebugContact.h"
+#include "Debug/OgreBulletCollisionsDebugShape.h"
+#include "Shapes/OgreBulletCollisionsBoxShape.h"
+#include "Shapes/OgreBulletCollisionsSphereShape.h"
+#include "Shapes/OgreBulletCollisionsConeShape.h"
+#include "Shapes/OgreBulletCollisionsCylinderShape.h"
+#include "Shapes/OgreBulletCollisionsTriangleShape.h"
+#include "Shapes/OgreBulletCollisionsStaticPlaneShape.h"
+#include "Shapes/OgreBulletCollisionsGImpactShape.h"
+#include "Shapes/OgreBulletCollisionsCompoundShape.h"
+#include "Shapes/OgreBulletCollisionsMultiSphereShape.h"
+#include "Shapes/OgreBulletCollisionsConvexHullShape.h"
+#include "Shapes/OgreBulletCollisionsMinkowskiSumShape.h"
+#include "Shapes/OgreBulletCollisionsTrimeshShape.h"
+#include "Utils/OgreBulletCollisionsMeshToShapeConverter.h"
+#include "Prefab/OgreBulletDynamicsRagDoll.h"
+
+#endif // _OgreBulletIncludes_h_

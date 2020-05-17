@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Source\Application.h" />
+    <ClInclude Include="..\Source\BulletListener.h" />
+    <ClInclude Include="..\Source\Environment.h" />
+    <ClInclude Include="..\Source\FrameListener.h" />
+    <ClInclude Include="..\Source\GUI\Gorilla.h" />
+    <ClInclude Include="..\Source\InputListener.h" />
+    <ClInclude Include="..\Source\Objects\Object.h" />
+    <ClInclude Include="..\Source\Objects\PhysicsObject.h" />
+    <ClInclude Include="..\Source\Objects\Vehicle\Axle.h" />
+    <ClInclude Include="..\Source\Objects\Vehicle\Chassis.h" />
+    <ClInclude Include="..\Source\Objects\Vehicle\Vehicle.h" />
+    <ClInclude Include="..\Source\Objects\Vehicle\Wheel.h" />
+    <ClInclude Include="..\Source\OgreBulletIncludes.h" />
+    <ClInclude Include="..\Source\OgreIncludes.h" />
+    <ClInclude Include="..\Source\Resources\Resource.h" />
+    <ClInclude Include="..\Source\Scripting\LuaConsole.h" />
+    <ClInclude Include="..\Source\Scripting\LuaIntegration.h" />
+    <ClInclude Include="..\Source\Scripting\LuaInterpreter.h" />
+    <ClInclude Include="..\Source\Scripting\LuaState.h" />
+    <ClInclude Include="..\Source\Scripting\Script.h" />
+    <ClInclude Include="..\Source\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Source\Resources\Vehicle.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Source\Application.cpp" />
+    <ClCompile Include="..\Source\BulletListener.cpp" />
+    <ClCompile Include="..\Source\Environment.cpp" />
+    <ClCompile Include="..\Source\FrameListener.cpp" />
+    <ClCompile Include="..\Source\GUI\Gorilla.cpp" />
+    <ClCompile Include="..\Source\InputListener.cpp" />
+    <ClCompile Include="..\Source\main.cpp" />
+    <ClCompile Include="..\Source\Objects\Object.cpp" />
+    <ClCompile Include="..\Source\Objects\PhysicsObject.cpp" />
+    <ClCompile Include="..\Source\Objects\Vehicle\Axle.cpp" />
+    <ClCompile Include="..\Source\Objects\Vehicle\Chassis.cpp" />
+    <ClCompile Include="..\Source\Objects\Vehicle\Vehicle.cpp" />
+    <ClCompile Include="..\Source\Objects\Vehicle\Wheel.cpp" />
+    <ClCompile Include="..\Source\Scripting\LuaConsole.cpp" />
+    <ClCompile Include="..\Source\Scripting\LuaInterpreter.cpp" />
+    <ClCompile Include="..\Source\Scripting\LuaState.cpp" />
+    <ClCompile Include="..\Source\Scripting\Script.cpp" />
+    <ClCompile Include="..\Source\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBD18166-9B11-4EA7-96E5-0F43E17087D1}</ProjectGuid>
+    <RootNamespace>Vehicle</RootNamespace>
+    <ProjectName>Framework</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <OutDir>..\Binaries\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <OutDir>..\Binaries\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OPENAL_SDK)\include;$(OGREOGG_HOME)\Include;..\Source\GUI;..\Source\Scripting;..\Source\;..\Source\Objects;..\Source\Objects\Vehicle;include;$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost;$(BULLET_HOME)\Include;$(OGRE_BULLET_HOME)\Include\Collisions;$(OGRE_BULLET_HOME)\Include\Dynamics;$(LUA_PATH)\Include;$(LUABIND_HOME)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)/Vehicle.pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OGREOGG_HOME)\Libraries;$(OGRE_HOME)\lib\debug;$(OGRE_HOME)\boost\lib;$(BULLET_HOME)\Libraries;$(OGRE_BULLET_HOME)\Libraries;$(LUA_PATH)\Libraries\Debug;$(LUABIND_HOME)\Libraries\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.Lib;ConvexDecomposition_Debug.lib;LinearMath_Debug.lib;OgreBulletCollisions_Debug.lib;OgreBulletDynamics_Debug.lib;OgreOggSound_d.lib;ogg_static_d.lib;vorbis_static_d.lib;vorbisfile_static_d.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib;Lua.lib;LuaBind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <AdditionalIncludeDirectories>$(OPENAL_SDK)\include;$(OGREOGG_HOME)\Include;..\Source\GUI;..\Source\Scripting;..\Source\;..\Source\Objects;..\Source\Objects\Vehicle;include;$(OGRE_HOME)\include;$(OGRE_HOME)\include\OIS;$(OGRE_HOME)\include\OGRE;$(OGRE_HOME)\Samples\Common\include;$(OGRE_HOME)\boost;$(BULLET_HOME)\Include;$(OGRE_BULLET_HOME)\Include\Collisions;$(OGRE_BULLET_HOME)\Include\Dynamics;$(LUA_PATH)\Include;$(LUABIND_HOME)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OGREOGG_HOME)\Libraries;$(OGRE_HOME)\lib\release;$(OGRE_HOME)\boost\lib;$(BULLET_HOME)\Libraries;$(OGRE_BULLET_HOME)\Libraries;$(LUA_PATH)\Libraries\Release;$(LUABIND_HOME)\Libraries\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;BulletCollision.lib;BulletDynamics.Lib;ConvexDecomposition.lib;LinearMath.lib;OgreBulletCollisions.lib;OgreBulletDynamics.lib;OgreOggSound.lib;ogg_static.lib;vorbis_static.lib;vorbisfile_static.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;Lua.lib;LuaBind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
